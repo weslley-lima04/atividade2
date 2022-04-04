@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="@drawable/sky"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -78,12 +79,31 @@
 
         </TableRow>
 
+
+
         <TextView
             android:layout_marginTop="180dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="180dp"
             android:text="@string/don_t_have_an_account"/>
+
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="270dp"
+                android:textStyle="bold"
+                android:text="@string/sign_up"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/seta"
+            android:layout_marginStart="280dp"/>
+
+
+
 
 
     </LinearLayout>

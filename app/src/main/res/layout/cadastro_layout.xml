@@ -7,7 +7,7 @@
     android:background="@drawable/sky"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".cadastro">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,12 +17,12 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="35dp"
-            android:paddingTop="100dp"
             android:src="@drawable/atomo" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/user"
+            android:id="@+id/user_cadastro"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,15 +35,14 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_people" />
 
-
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/senha"
+            android:id="@+id/pass_cadastro"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:hint="@string/password">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -54,41 +53,66 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_cadastro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/e_mail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_email" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_cadastro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/allow_term_and_conditions" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_borda_redonda"
+            android:text="@string/sign_in"
+            android:textAllCaps="false" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/remember_password" />
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_borda_redonda"
-                android:text="@string/sign_in"
-                android:textAllCaps="false" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:text="@string/forget_password" />
-
-        </TableRow>
-
-
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="180dp"
             android:layout_marginEnd="25dp"
-            android:text="@string/don_t_have_an_account" />
+            android:layout_marginTop="30dp"
+            android:text="@string/already_have_an_account" />
 
         <TextView
 
@@ -96,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="25dp"
-            android:text="@string/sign_up"
+            android:text="@string/sign_in"
             android:textStyle="bold" />
 
         <ImageView
@@ -104,7 +128,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:src="@drawable/seta" />
-
-
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
